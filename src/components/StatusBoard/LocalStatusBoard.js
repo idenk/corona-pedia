@@ -30,12 +30,16 @@ export default function LocalStatusBoard({ localData }) {
         <div>
           <div id="local-status-container">
             <div>
-              {/* <button onClick={() => chartHandler(0)}>신규</button>
-              <button onClick={() => chartHandler(1)}>누적</button> */}
+              <div className="local-status-chart-name">시도별 신규 확진자수</div>
+              <div className="local-status-chart">
+                <LocalNewCaseChart localData={localData} />
+              </div>
             </div>
-            <div id="local-new_case-status-chart">
-              <LocalNewCaseChart localData={localData} />
-              <LocalTotalCaseChart localData={localData} />
+            <div>
+              <div className="local-status-chart-name">시도별 확진자수</div>
+              <div className="local-status-chart">
+                <LocalTotalCaseChart localData={localData} />
+              </div>
             </div>
           </div>
         </div>
