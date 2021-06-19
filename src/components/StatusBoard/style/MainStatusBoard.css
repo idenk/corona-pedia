@@ -1,0 +1,74 @@
+#main-status-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main-status-info{
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+#status-header {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  text-align: center;
+  font-weight: 300;
+}
+
+.status-header-card1 {
+  width: 200px;
+  height: 50px;
+  /* background-color: #d7d9d5; */
+  padding-top: 15px;
+  border: 1px solid white;
+}
+
+.status-header-card2 {
+  width: 300px;
+  height: 50px;
+  /* background-color: #288000; */
+  padding-top: 15px;
+  border: 1px solid white;
+}
+
+.status-header-card2 > span:nth-child(2) {
+  margin-left: 10px;
+}
+
+#status-body {
+  display:flex;
+  justify-content: center;
+}
+
+.status-body-card {
+  width: 200px;
+  height: 100px;
+  /* border-radius: 10px; */
+  margin-top:5px;
+  text-align: center;
+  /* color: white; */
+  font-weight: 300;
+}
+
+.status-body-card > div:nth-child(1) {
+  margin-top: 3px;
+}
+
+.status-body-card > div:nth-child(2) {
+  margin-top: 10px;
+  font-size: 2rem;
+}
+
+.yellow {
+  color: rgb(251,171,23);
+}
+
+.blue {
+  color: rgb(108,198,186);
+}
+
+.red {
+  color: rgb(221,94,39);
+}
