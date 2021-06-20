@@ -31,12 +31,15 @@ export default function Home() {
         ''
       ) : (
         <React.Fragment>
-          <div id="home-main-container">
-            <MainStatusBoard data={coronaData} localData={localCoronaData} vaccineData={vaccineData}/>
-            <InspectStatusBoard data={coronaData}/>
-          </div>
-          <div id="home-local-container">
-            <LocalStatusBoard localData={localCoronaData} />
+          <div>
+            <div id="home-main-container">
+              <MainStatusBoard data={coronaData} localData={localCoronaData} vaccineData={vaccineData}
+              />
+              <InspectStatusBoard data={coronaData} />
+            </div>
+            <div id="home-local-container">
+              <LocalStatusBoard localData={localCoronaData} vaccineData={vaccineData} />
+            </div>
           </div>
         </React.Fragment>
       )}

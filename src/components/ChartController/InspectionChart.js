@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import MyResponsivePie from '../Chart/MyResponsivePie';
 import custom from '../../CustomFunction/custom';
 
-
 export default function InspectionChart({ data }) {
 
   const [chartPieData, setChartPieData] = useState([]);

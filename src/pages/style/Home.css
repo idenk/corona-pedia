@@ -8,6 +8,7 @@
   border: 1px solid black;
 }
 
-/* #home-local-container {
-
-} */
+#home-local-container {
+  margin-left: 50px;
+  margin-right: 50px;
+}

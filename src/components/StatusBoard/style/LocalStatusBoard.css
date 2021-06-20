@@ -1,4 +1,10 @@
 #local-status-container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+#local-status-chart-container {
   display:flex;
   flex-direction: row;
   justify-content: center;
@@ -16,4 +22,13 @@
   flex-direction: column;
   justify-content: center;
   /* transform: 0.5s; */
+}
+
+#local-status-card-container {
+  /* grid */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 80px;      /*열 간격*/
+  column-gap: 40px;   /*행 간격*/
+  margin-top: 40px;
 }

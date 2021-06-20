@@ -1,50 +1,57 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import LocalNewCaseChart from '../ChartController/LocalNewCaseChart';
 import LocalTotalCaseChart from '../ChartController/LocalTotalCaseChart';
+import LocalStatusCard from './LocalStatusCard';
 import './style/LocalStatusBoard.css';
 
-export default function LocalStatusBoard({ localData }) {
+export default function LocalStatusBoard({ localData, vaccineData }) {
   
-  //! ERROR. how to change chart using button? 
-  //! Study Compenent life cycle and state
-  // const [chart, setChart] = useState(0);
-  // const [isLoading, setIsLoading] = useState(true);
-  
-  // console.log(localData);
+  let localDataArr = Object.entries(localData);
+  let vaccineDataArr = Object.entries(vaccineData);
+  const mergedLocalData = [];
 
-  // function chartHandler(num) {
-  //   setChart(num);
-  // }
+  localDataArr = localDataArr.slice(3, 20);   // idx) 4: 광주, 5: 대전 6: 울산, 7: 세종
+  vaccineDataArr = vaccineDataArr.slice(1);   // idx) 4: 울산, 5: 광주 6: 세종, 7: 대전
 
-  // useEffect(() => {
-  //   setIsLoading(true);
+  [vaccineDataArr[4], vaccineDataArr[5], vaccineDataArr[6], vaccineDataArr[7]] =
+    [vaccineDataArr[5], vaccineDataArr[7], vaccineDataArr[4], vaccineDataArr[6]];
 
-  //   setIsLoading(false);
-  // }, [chart]);
+  // console.log(localDataArr);
+  // console.log(vaccineDataArr);
 
+  for (let i = 0; i < localDataArr.length; i++){
+    mergedLocalData[i] = Object.assign(
+      {},
+      { name : `${localDataArr[i][1].countryName}. ${vaccineDataArr[i][1].sido}` },
+      { local : localDataArr[i][1] },
+      { vaccine : vaccineDataArr[i][1] }
+    );
+  }
+  console.log(mergedLocalData);
 
   return (
     <React.Fragment>
-      {/* {isLoading ? (
-        ''
-      ) : ( */}
-        <div>
-          <div id="local-status-container">
-            <div>
-              <div className="local-status-chart-name">시도별 신규 확진자수</div>
-              <div className="local-status-chart">
-                <LocalNewCaseChart localData={localData} />
-              </div>
+      <div id="local-status-container">
+        <div id="local-status-chart-container">
+          <div>
+            <div className="local-status-chart-name">시도별 신규 확진자수</div>
+            <div className="local-status-chart">
+              <LocalNewCaseChart localData={localData} />
             </div>
-            <div>
-              <div className="local-status-chart-name">시도별 확진자수</div>
-              <div className="local-status-chart">
-                <LocalTotalCaseChart localData={localData} />
-              </div>
+          </div>
+          <div>
+            <div className="local-status-chart-name">시도별 확진자수</div>
+            <div className="local-status-chart">
+              <LocalTotalCaseChart localData={localData} />
             </div>
           </div>
         </div>
-      {/* )} */}
+        <div id="local-status-card-container">
+          {mergedLocalData.map((local, idx) => {
+              return <LocalStatusCard key={idx} eLocalData={local} />;
+          })}
+        </div>
+      </div>
     </React.Fragment>
   );
 }
