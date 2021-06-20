@@ -1,14 +1,13 @@
 import { ResponsiveBar } from '@nivo/bar';
 
-export default function MyResponsiveBar({ data = {} }) {
-  // console.log(data);
+export default function MyResponsiveBar({ data }) {
 
   return (
     <ResponsiveBar
       data={data}
       keys={[data[0].chartKey]}     // use prop
       indexBy="region"
-      margin={{ top: 50, right: 10, bottom: 50, left: 60 }}
+      margin={{ top: 40, right: 10, bottom: 50, left: 60 }}
       padding={0.6}
       valueScale={{ type: 'linear' }}
       indexScale={{ type: 'band', round: true }}

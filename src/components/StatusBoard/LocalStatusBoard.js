@@ -5,28 +5,29 @@ import './style/LocalStatusBoard.css';
 
 export default function LocalStatusBoard({ localData }) {
   
-  const [chart, setChart] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
+  //! ERROR. how to change chart using button? 
+  //! Study Compenent life cycle and state
+  // const [chart, setChart] = useState(0);
+  // const [isLoading, setIsLoading] = useState(true);
   
-  //! ERROR 
   // console.log(localData);
 
   // function chartHandler(num) {
   //   setChart(num);
   // }
 
-  useEffect(() => {
-    setIsLoading(true);
+  // useEffect(() => {
+  //   setIsLoading(true);
 
-    setIsLoading(false);
-  }, [chart]);
+  //   setIsLoading(false);
+  // }, [chart]);
 
 
   return (
     <React.Fragment>
-      {isLoading ? (
+      {/* {isLoading ? (
         ''
-      ) : (
+      ) : ( */}
         <div>
           <div id="local-status-container">
             <div>
@@ -43,7 +44,7 @@ export default function LocalStatusBoard({ localData }) {
             </div>
           </div>
         </div>
-      )}
+      {/* )} */}
     </React.Fragment>
   );
 }

@@ -1,6 +1,6 @@
 import { ResponsivePie } from '@nivo/pie';
 
-export default function MyResponsivePie({ data = {} }) {
+export default function MyResponsivePie({ data  }) {
 
   return (
     <ResponsivePie

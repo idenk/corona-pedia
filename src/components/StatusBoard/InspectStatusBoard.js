@@ -1,10 +1,10 @@
 import React from 'react';
-// import CountUp from 'react-countup';
-// import custom from '../../CustomFunction/custom';
+import CountUp from 'react-countup';
+import custom from '../../CustomFunction/custom';
 import InspectionChart from '../ChartController/InspectionChart';
 import './style/InspectStatusBoard.css';
 
-export default function InspectStatusBoard({ data = {} }) {
+export default function InspectStatusBoard({ data }) {
 
   return (
     <React.Fragment>
@@ -13,19 +13,19 @@ export default function InspectStatusBoard({ data = {} }) {
           <div>검사현황</div>
           <div className="inspect-status-description-item">
             <span>누적 검사수</span>
-            <span>{data.TotalChecking}건</span>
+            <span><CountUp end={custom.getNumber(data.TotalChecking)} duration={1} separator={','}/>건</span>
           </div>
           <div className="inspect-status-description-item">
             <span>결과 음성</span>
-            <span>{data.notcaseCount}건</span>
+            <span><CountUp end={custom.getNumber(data.notcaseCount)} duration={1} separator={','}/>건</span>
           </div>
           <div className="inspect-status-description-item">
             <span>결과 양성</span>
-            <span>{data.caseCount}건</span>
+            <span><CountUp end={custom.getNumber(data.caseCount)} duration={1} separator={','}/>건</span>
           </div>
           <div className="inspect-status-description-item">
             <span>누적 확진율</span>
-            <span>{data.casePercentage}%</span>
+            <span><CountUp end={custom.getNumber(data.casePercentage)} duration={1} separator={','} decimals={1}/>%</span>
           </div>
         </div>
         <div id="inspect-status-chart">

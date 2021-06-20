@@ -5,13 +5,12 @@ import custom from '../../CustomFunction/custom';
 export default function LocalNewCaseChart({ localData }) {
   
   const [chartBarData, setChartBarData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);   //! for successful load
   
-  const chartKey = '신규 확진자수';
+  const chartKey = '신규 확진자수'; // use one key
   
   useEffect(() => {
     setIsLoading(true);
-    
     if (localData) {
       let newChartBarData = [];
       
@@ -27,7 +26,7 @@ export default function LocalNewCaseChart({ localData }) {
             if (count === 0) newChartBarData[count].chartKey = chartKey;
             newChartBarData[count].region = localData[key].countryName;
             newChartBarData[count][chartKey] = localData[key].newCase;
-            newChartBarData[count].color = 'rgb(254,223,115)';
+            newChartBarData[count].color = 'rgb(254,223,115)';  //? how to use diffrent color for each key?
             
             count++;
           }

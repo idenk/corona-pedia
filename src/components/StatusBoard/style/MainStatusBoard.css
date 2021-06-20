@@ -7,6 +7,7 @@
 #main-status-info{
   font-size: 1rem;
   font-weight: 300;
+  margin-top: 5px;
 }
 
 #status-header {
@@ -37,8 +38,9 @@
   margin-left: 10px;
 }
 
-#status-body {
+.status-body {
   display:flex;
+  flex-direction: row;
   justify-content: center;
 }
 
@@ -71,4 +73,8 @@
 
 .red {
   color: rgb(221,94,39);
+}
+
+.green {
+  color: rgb(103,203,117);
 }
