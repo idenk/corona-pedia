@@ -27,12 +27,12 @@ export default function LocalStatusCard({ eLocalData }) {
             </div>
             <div className="local-card-status-item vaccine-status">
               <span>1차 접종</span>
-              <span>{(eLocalData.vaccine.accumulatedFirstCnt).toLocaleString('ko-KR')}</span>
+              <span>{(eLocalData.vaccine.totalFirstCnt).toLocaleString('ko-KR')}</span>
               <span className="green">&nbsp;(+{(eLocalData.vaccine.firstCnt).toLocaleString('ko-KR')})</span>
             </div>
             <div className="local-card-status-item">
               <span>접종 완료</span>
-              <span>{(eLocalData.vaccine.accumulatedSecondCnt).toLocaleString('ko-KR')}</span>
+              <span>{(eLocalData.vaccine.totalSecondCnt).toLocaleString('ko-KR')}</span>
               <span className="green">&nbsp;(+{(eLocalData.vaccine.secondCnt).toLocaleString('ko-KR')})</span>
             </div>
           </div>

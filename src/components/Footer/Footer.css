@@ -1,0 +1,19 @@
+#footer-body {
+  background-color: rgb(51,51,51);
+  height: auto;
+  width: 100vw;
+  margin-top: 80px;
+  padding-top: 10px;
+  color: white;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-content h3{
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-transform: capitalize;
+  text-align: center;
+}

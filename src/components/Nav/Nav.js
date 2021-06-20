@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Nav.css';
 
-function Nav() {
+export default function Nav() {
 
   return (
     <React.Fragment>
@@ -18,5 +18,3 @@ function Nav() {
     </React.Fragment>
   );
 }
-
-export default Nav;
