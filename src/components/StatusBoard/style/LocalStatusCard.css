@@ -33,9 +33,9 @@
   display: flex;
   /* flex-direction: column; */
   justify-content: space-between;
-  width: 230px;
+  width: 250px;
   margin-top: 5px;
-  margin-left: 60px;
+  margin-left: 70px;
 }
 
 .local-card-status-item > span:nth-child(1) {
