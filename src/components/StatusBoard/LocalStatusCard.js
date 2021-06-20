@@ -11,29 +11,29 @@ export default function LocalStatusCard({ eLocalData }) {
         <div id="local-card-status-container">
           <div className="local-card-status">
             <div className="local-card-status-item">
-              <span className="local-card-status-item-name">확진자</span>
-              <span className="local-card-status-item-data">{(eLocalData.local.totalCase).toLocaleString('ko-KR')}</span>
-              <span className="local-card-status-item-new yellow">&nbsp;(+{(eLocalData.local.newCase).toLocaleString('ko-KR')})</span>
+              <span>확진자</span>
+              <span>{(eLocalData.local.totalCase).toLocaleString('ko-KR')}</span>
+              <span className="yellow">&nbsp;(+{(eLocalData.local.newCase).toLocaleString('ko-KR')})</span>
             </div>
             <div className="local-card-status-item">
-              <span className="local-card-status-item-name">완치자</span>
-              <span className="local-card-status-item-data">{eLocalData.local.recovered}</span>
+              <span>완치자</span>
+              <span>{eLocalData.local.recovered}</span>
               <span className="local-card-status-item-new"></span>
             </div>
             <div className="local-card-status-item">
-              <span className="local-card-status-item-name">사망자</span>
-              <span className="local-card-status-item-data">{eLocalData.local.death}</span>
+              <span>사망자</span>
+              <span>{eLocalData.local.death}</span>
               <span className="local-card-status-item-new"></span>
             </div>
             <div className="local-card-status-item vaccine-status">
-              <span className="local-card-status-item-name">1차 접종</span>
-              <span className="local-card-status-item-data">{(eLocalData.vaccine.accumulatedFirstCnt).toLocaleString('ko-KR')}</span>
-              <span className="local-card-status-item-new green">&nbsp;(+{(eLocalData.vaccine.firstCnt).toLocaleString('ko-KR')})</span>
+              <span>1차 접종</span>
+              <span>{(eLocalData.vaccine.accumulatedFirstCnt).toLocaleString('ko-KR')}</span>
+              <span className="green">&nbsp;(+{(eLocalData.vaccine.firstCnt).toLocaleString('ko-KR')})</span>
             </div>
             <div className="local-card-status-item">
-              <span className="local-card-status-item-name">접종 완료</span>
-              <span className="local-card-status-item-data">{(eLocalData.vaccine.accumulatedSecondCnt).toLocaleString('ko-KR')}</span>
-              <span className="local-card-status-item-new green">&nbsp;(+{(eLocalData.vaccine.secondCnt).toLocaleString('ko-KR')})</span>
+              <span>접종 완료</span>
+              <span>{(eLocalData.vaccine.accumulatedSecondCnt).toLocaleString('ko-KR')}</span>
+              <span className="green">&nbsp;(+{(eLocalData.vaccine.secondCnt).toLocaleString('ko-KR')})</span>
             </div>
           </div>
           {/* chart? */}

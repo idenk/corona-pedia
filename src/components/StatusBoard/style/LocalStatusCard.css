@@ -38,17 +38,17 @@
   margin-left: 60px;
 }
 
-.local-card-status-item-name {
+.local-card-status-item > span:nth-child(1) {
   font-weight: 300;
   flex: 1 0 0;
 }
 
-.local-card-status-item-data {
+.local-card-status-item > span:nth-child(2) {
   flex: 1 0 0;
   text-align: right;
 }
 
-.local-card-status-item-new {
+.local-card-status-item > span:nth-child(3) {
   flex: 1 0 0;
 }
 

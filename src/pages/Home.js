@@ -14,8 +14,9 @@ export default function Home() {
 
   useEffect(() => {
     setIsLoading(true);
+
     getCoronaData()
-    .then((data) => {
+      .then((data) => {
         console.log(data); //! check data
         setCoronaData(data[0]);
         setlocalCoronaData(data[1]);
@@ -23,26 +24,23 @@ export default function Home() {
 
         setIsLoading(false);
       })
-  }, [])
+  }, []);
 
   return (
-    <div>
+    <React.Fragment>
       {isLoading ? (
         ''
       ) : (
-        <React.Fragment>
           <div>
             <div id="home-main-container">
-              <MainStatusBoard data={coronaData} localData={localCoronaData} vaccineData={vaccineData}
-              />
+              <MainStatusBoard data={coronaData} localData={localCoronaData} vaccineData={vaccineData}/>
               <InspectStatusBoard data={coronaData} />
             </div>
             <div id="home-local-container">
               <LocalStatusBoard localData={localCoronaData} vaccineData={vaccineData} />
             </div>
           </div>
-        </React.Fragment>
       )}
-    </div>
+    </React.Fragment>
   );
 }
