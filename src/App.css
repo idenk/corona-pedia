@@ -11,3 +11,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.yellow {
+  color: rgb(251,171,23);
+}
+
+.blue {
+  color: rgb(108,198,186);
+}
+
+.red {
+  color: rgb(221,94,39);
+}
+
+.green {
+  color: rgb(103,203,117);
+}

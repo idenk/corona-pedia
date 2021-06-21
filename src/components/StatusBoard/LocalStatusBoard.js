@@ -10,11 +10,8 @@ export default function LocalStatusBoard({ localData, vaccineData }) {
   let vaccineDataArr = Object.entries(vaccineData);
   const LocalTotalData = [];
 
-  localDataArr = localDataArr.slice(2, 20);   // idx) 5: 광주, 6: 대전 7: 울산, 8: 세종
-  vaccineDataArr = vaccineDataArr.slice(0);   // idx) 5: 울산, 6: 광주 7: 세종, 8: 대전
-
-  [vaccineDataArr[5], vaccineDataArr[6], vaccineDataArr[7], vaccineDataArr[8]] =
-    [vaccineDataArr[6], vaccineDataArr[8], vaccineDataArr[5], vaccineDataArr[7]];
+  localDataArr = localDataArr.slice(2, 20);
+  vaccineDataArr = vaccineDataArr.slice(0);
 
   // console.log(localDataArr);
   // console.log(vaccineDataArr);

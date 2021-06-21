@@ -20,7 +20,7 @@ export default function InspectionChart({ data }) {
           id: `국내 검사결과 양성\n${casePercentage}%`,
           label: '국내 검사결과 양성',
           value: caseCount,
-          color: 'rgb(235,186,180)',
+          color: 'rgb(251,171,23)',
         },
         {
           id: `국내 검사결과 음성\n${notcasePercentage}%`,
