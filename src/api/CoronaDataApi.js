@@ -1,7 +1,5 @@
 // import axios from 'axios';
 import fetch from 'node-fetch';
-
-console.log(process.env);
 // import { CORONA_API_KEY, DATA_PORTAL_API_KEY } from '../config/key';
 
 
