@@ -1,6 +1,8 @@
 // import axios from 'axios';
 import fetch from 'node-fetch';
-import { CORONA_API_KEY, DATA_PORTAL_API_KEY } from '../config/key';
+
+console.log(process.env);
+// import { CORONA_API_KEY, DATA_PORTAL_API_KEY } from '../config/key';
 
 
 export async function getCoronaData() {
@@ -9,14 +11,14 @@ export async function getCoronaData() {
   const baseDate = new Date(today.setDate(today.getDate()-1)); // base date: yesterday //? 백신 API는 09시 35분경 업데이트
   //  toISOString(): YYYY-MM-DDThh:mm:ss.zzzZ 형식으로 변환 (UTC시간 기준. 한국 시간보다 9시간 느림)
   //  getTimezoneOffset(): 현재 시간과의 차이를 분 단위로 반환 => -540분 = -9시간
-  //  new Date는 밀리 초 단위를 인자로 받으므로 오프셋 값에 1000(밀리초) * 60(1분) = 60000만을 곱하여 전달
+  //  new Date는 밀리 초 단위를 인자로 받으므로 오프셋 값에 1000(밀리초) * 60(1분) = 60000을 곱하여 전달
   let baseDateFormat = new Date(baseDate.getTime() - (baseDate.getTimezoneOffset() * 60000)).toISOString().split('T')[0] + ' 00:00:00';
-  // console.log(baseDateFormat);
+  // console.log(baseDateFormat); // YYYY-MM-DD 00:00:00 (어제 날짜)
   
   // Url
-  const coronaDataUrl = 'https://api.corona-19.kr/korea/?serviceKey=' + CORONA_API_KEY;
-  const localCoronaDataUrl = 'https://api.corona-19.kr/korea/country/new/?serviceKey=' + CORONA_API_KEY;
-  const vaccineUrl = `https://api.odcloud.kr/api/15077756/v1/vaccine-stat?page=1&perPage=36&cond%5BbaseDate%3A%3AGTE%5D=${baseDateFormat}&serviceKey=` + DATA_PORTAL_API_KEY;
+  const coronaDataUrl = 'https://api.corona-19.kr/korea/?serviceKey=' + process.env.REACT_APP_CORONA_API_KEY;
+  const localCoronaDataUrl = 'https://api.corona-19.kr/korea/country/new/?serviceKey=' + process.env.REACT_APP_CORONA_API_KEY;
+  const vaccineUrl = `https://api.odcloud.kr/api/15077756/v1/vaccine-stat?page=1&perPage=36&cond%5BbaseDate%3A%3AGTE%5D=${baseDateFormat}&serviceKey=` + process.env.REACT_APP_DATA_PORTAL_API_KEY;
 
   const urls = [coronaDataUrl, localCoronaDataUrl, vaccineUrl];
 

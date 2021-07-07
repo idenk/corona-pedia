@@ -3,7 +3,7 @@ import MyResponsivePie from '../Chart/MyResponsivePie';
 import custom from '../../CustomFunction/custom';
 //! Not use
 export default function LocalChart({ elocalData }) {
-  console.log('chart', elocalData);
+  // console.log('chart', elocalData);
   
   const [chartPieData, setChartPieData] = useState({});
 

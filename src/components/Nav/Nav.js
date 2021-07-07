@@ -12,7 +12,7 @@ export default function Nav() {
         </span>
         <div id="menu">
           <Link to="/">코로나 현황</Link>
-          <Link to="/vaccine">백신</Link>
+          {/* <Link to="/vaccine">백신</Link> */}
         </div>
       </div>
     </React.Fragment>

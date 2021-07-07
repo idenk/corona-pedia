@@ -13,9 +13,6 @@ export default function LocalStatusBoard({ localData, vaccineData }) {
   localDataArr = localDataArr.slice(2, 20);
   vaccineDataArr = vaccineDataArr.slice(0);
 
-  // console.log(localDataArr);
-  // console.log(vaccineDataArr);
-
   for (let i = 0; i < localDataArr.length; i++){
     LocalTotalData[i] = Object.assign(
       {},
@@ -24,7 +21,7 @@ export default function LocalStatusBoard({ localData, vaccineData }) {
       { vaccine : vaccineDataArr[i][1] }
     );
   }
-  console.log('LocalTotalData', LocalTotalData);
+  // console.log('LocalTotalData', LocalTotalData);
 
   return (
     <React.Fragment>

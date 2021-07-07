@@ -17,7 +17,7 @@ export default function Home() {
 
     getCoronaData()
       .then((data) => {
-        console.log('api_data', data); //! check data
+        // console.log('api_data', data); //! check data
         setCoronaData(data[0]);
         setlocalCoronaData(data[1]);
         setVaccineData(data[2].data);
