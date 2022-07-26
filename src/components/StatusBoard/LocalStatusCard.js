@@ -1,5 +1,5 @@
 import React from 'react';
-import LocalChart from '../ChartController/LocalChart';
+// import LocalChart from '../ChartController/LocalChart';
 import './style/LocalStatusCard.css';
 
 export default function LocalStatusCard({ eLocalData }) {

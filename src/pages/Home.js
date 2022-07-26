@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { getCoronaData } from '../api/CoronaDataApi';
-import InspectStatusBoard from '../components/StatusBoard/InspectStatusBoard';
+// import InspectStatusBoard from '../components/StatusBoard/InspectStatusBoard';
 import MainStatusBoard from '../components/StatusBoard/MainStatusBoard'
 import LocalStatusBoard from '../components/StatusBoard/LocalStatusBoard'
 import './style/Home.css';
@@ -34,7 +34,7 @@ export default function Home() {
           <div>
             <div id="home-main-container">
               <MainStatusBoard data={coronaData} localData={localCoronaData} vaccineData={vaccineData}/>
-              <InspectStatusBoard data={coronaData} />
+              {/* <InspectStatusBoard data={coronaData} /> */}
             </div>
             <div id="home-local-container">
               <LocalStatusBoard localData={localCoronaData} vaccineData={vaccineData} />
